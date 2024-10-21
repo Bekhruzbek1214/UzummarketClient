@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="180dp"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="5dp"
+    android:layout_marginVertical="10dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:selectableItemBackground">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/box_img"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:backgroundTint="#EEEEEE"
+            android:elevation="0dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="0dp"
+            app:layout_constraintBottom_toTopOf="@id/pas"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_weight="2.2">
+
+            <ImageView
+                android:id="@+id/img_product"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:elevation="0dp"
+                tools:ignore="ContentDescription" />
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:id="@+id/pas"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/box_img"
+            app:layout_constraintVertical_weight="1" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/box_txt_eksklyuziv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_marginBottom="3dp"
+            android:visibility="gone"
+            app:cardBackgroundColor="#6A01FC"
+            app:cardCornerRadius="9dp"
+            app:cardElevation="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/box_img"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="7dp"
+                android:paddingVertical="1dp"
+                android:text="Eksklyuziv"
+                android:textColor="#FFF"
+                android:textSize="12dp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/box_txt_aksiya"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_marginBottom="3dp"
+            android:visibility="gone"
+            app:cardBackgroundColor="#3A0079"
+            app:cardCornerRadius="9dp"
+            app:cardElevation="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/box_img"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintLeft_toRightOf="@id/box_txt_eksklyuziv"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="7dp"
+                android:paddingVertical="1dp"
+                android:text="Aksiya"
+                android:textColor="#FFF"
+                android:textSize="12dp" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/txt_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="Kungaboqar yog'i Oila tanlovi, tozalangan va xidsiz"
+            android:textColor="#000"
+            android:textSize="17dp"
+            app:layout_constraintBottom_toBottomOf="@id/pas"
+            app:layout_constraintTop_toTopOf="@id/pas"
+            app:layout_constraintVertical_bias="0" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/box_txt_muddat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:cardBackgroundColor="#F6F907"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintLeft_toLeftOf="@id/txt_name"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_name"
+            app:layout_constraintVertical_bias="0">
+
+            <TextView
+                android:id="@+id/txt_tolov_muddat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="6dp"
+                android:paddingVertical="1dp"
+                android:text="1 560 so'm/oyiga"
+                android:textColor="#4E4304"
+                android:textSize="14dp" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="5dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="13 000 so'm"
+            android:textSize="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintLeft_toLeftOf="@id/box_txt_muddat"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/box_txt_muddat" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

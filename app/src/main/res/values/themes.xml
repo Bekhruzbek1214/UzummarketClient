@@ -1,0 +1,11 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.UzummarketClient" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+         <item name="colorPrimary">@color/uzum</item>
+    </style>
+
+    <style name="Theme.UzummarketClient" parent="Base.Theme.UzummarketClient">
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+</resources>

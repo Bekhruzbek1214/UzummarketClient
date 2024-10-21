@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_nav"
+    app:startDestination="@id/splashScreen">
+
+    <fragment
+        android:id="@+id/loginScreen"
+        android:name="com.example.uzummarketclient.presenter.screen.LoginScreen"
+        tools:layout="@layout/screen_log_in"
+        android:label="LoginScreen" >
+        <action
+            app:popUpTo="@id/loginScreen"
+            app:popUpToInclusive="true"
+            android:id="@+id/action_loginScreen_to_mainScreen"
+            app:destination="@id/mainScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashScreen"
+        android:name="com.example.uzummarketclient.presenter.screen.SplashScreen"
+        android:label="SplashScreen"
+        tools:layout="@layout/screen_splash">
+        <action
+            app:popUpTo="@id/splashScreen"
+            app:popUpToInclusive="true"
+            android:id="@+id/action_splashScreen_to_loginScreen"
+            app:destination="@id/loginScreen" />
+        <action
+            app:popUpTo="@id/splashScreen"
+            app:popUpToInclusive="true"
+            android:id="@+id/action_splashScreen_to_mainScreen"
+            app:destination="@id/mainScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainScreen"
+        tools:layout="@layout/screen_main"
+        android:name="com.example.uzummarketclient.presenter.screen.MainScreen"
+        android:label="MainScreen" >
+        <action
+            app:popUpTo="@id/mainScreen"
+            app:popUpToInclusive="true"
+            android:id="@+id/action_mainScreen_to_loginScreen"
+            app:destination="@id/loginScreen" />
+        <action
+            android:id="@+id/action_mainScreen_to_productInfoScreen"
+            app:destination="@id/productInfoScreen" />
+        <action
+            android:id="@+id/action_mainScreen_to_basketScreen2"
+            app:destination="@id/basketScreen2" />
+        <action
+            android:id="@+id/action_mainScreen_to_profileScreen2"
+            app:destination="@id/profileScreen2" />
+        <action
+
+            android:id="@+id/action_mainScreen_to_myOrders"
+            app:destination="@id/myOrders" />
+    </fragment>
+    <fragment
+        android:id="@+id/productInfoScreen"
+        android:name="com.example.uzummarketclient.presenter.screen.ProductInfoScreen"
+        tools:layout="@layout/screen_product_info"
+        android:label="ProductInfoScreen" >
+        <argument
+            android:name="data"
+            app:argType="com.example.uzummarketclient.data.model.ProductByMainData" />
+    </fragment>
+    <fragment
+        android:id="@+id/basketScreen2"
+        android:name="com.example.uzummarketclient.presenter.screen.BasketScreen"
+        android:label="BasketScreen" >
+        <action
+            android:id="@+id/action_basketScreen2_to_productInfoScreen"
+            app:destination="@id/productInfoScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileScreen2"
+        android:name="com.example.uzummarketclient.presenter.screen.ProfileScreen"
+        android:label="ProfileScreen" />
+    <fragment
+        android:id="@+id/myOrders"
+        android:name="com.example.uzummarketclient.presenter.screen.MyOrders"
+        android:label="MyOrders" >
+    </fragment>
+</navigation>

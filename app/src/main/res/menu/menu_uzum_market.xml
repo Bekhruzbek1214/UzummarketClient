@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/homeScreen"
+        android:icon="@drawable/uzum_icon2"
+        android:title="Bosh sahifa"/>
+    <item
+        android:id="@+id/basketScreen"
+        android:icon="@drawable/basket"
+        android:title="Savat"/>
+    <item
+        android:id="@+id/profileScreen"
+        android:icon="@drawable/person_uzum"
+        android:title="Profil"/>
+
+</menu>
